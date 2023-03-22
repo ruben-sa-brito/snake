@@ -83,6 +83,17 @@ while True:
                 
                 
         snake[0] = (snake[0][0] + x_m, snake[0][1] + y_m)
+        if snake[0][0] > 640:
+            snake[0] = (0, snake[0][1])
+        
+        if snake[0][0] < 0:
+            snake[0] = (640, snake[0][1])
+        
+        if snake[0][1] > 480:
+            snake[0] = (snake[0][0], 0)
+        
+        if snake[0][1] < 0:
+            snake[0] = (snake[0][0], 480)           
         
         
             
